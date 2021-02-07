@@ -1,0 +1,26 @@
+import java.lang
+import java.util
+import org.openhab.core.events
+import org.openhab.core.items
+import org.openhab.core.voice.text
+
+
+class StandardInterpreter(org.openhab.core.voice.text.AbstractRuleBasedInterpreter):
+    """
+    Java class 'org.openhab.core.voice.internal.text.StandardInterpreter'
+    
+        Extends:
+            org.openhab.core.voice.text.AbstractRuleBasedInterpreter
+    
+      Constructors:
+        * StandardInterpreter()
+    
+    """
+    def __init__(self): ...
+    def createRules(self) -> None: ...
+    def getId(self) -> java.lang.String: ...
+    def getLabel(self, locale: java.util.Locale) -> java.lang.String: ...
+    def setEventPublisher(self, EventPublisher: org.openhab.core.events.EventPublisher) -> None: ...
+    def setItemRegistry(self, ItemRegistry: org.openhab.core.items.ItemRegistry) -> None: ...
+    def unsetEventPublisher(self, eventPublisher: org.openhab.core.events.EventPublisher) -> None: ...
+    def unsetItemRegistry(self, itemRegistry: org.openhab.core.items.ItemRegistry) -> None: ...

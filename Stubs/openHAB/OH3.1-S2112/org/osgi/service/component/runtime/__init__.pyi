@@ -1,0 +1,19 @@
+import java.lang
+import java.util
+import org.osgi.framework
+import org.osgi.service.component.runtime.dto
+import org.osgi.util.promise
+import typing
+
+
+class ServiceComponentRuntime(java.lang.Object):
+    """
+    Java class 'org.osgi.service.component.runtime.ServiceComponentRuntime'
+    
+    """
+    def disableComponent(self, componentDescriptionDTO: org.osgi.service.component.runtime.dto.ComponentDescriptionDTO) -> org.osgi.util.promise.Promise[None]: ...
+    def enableComponent(self, componentDescriptionDTO: org.osgi.service.component.runtime.dto.ComponentDescriptionDTO) -> org.osgi.util.promise.Promise[None]: ...
+    def getComponentConfigurationDTOs(self, componentDescriptionDTO: org.osgi.service.component.runtime.dto.ComponentDescriptionDTO) -> java.util.Collection[org.osgi.service.component.runtime.dto.ComponentConfigurationDTO]: ...
+    def getComponentDescriptionDTO(self, bundle: org.osgi.framework.Bundle, string: java.lang.String) -> org.osgi.service.component.runtime.dto.ComponentDescriptionDTO: ...
+    def getComponentDescriptionDTOs(self, bundleArray: typing.List[org.osgi.framework.Bundle]) -> java.util.Collection[org.osgi.service.component.runtime.dto.ComponentDescriptionDTO]: ...
+    def isComponentEnabled(self, componentDescriptionDTO: org.osgi.service.component.runtime.dto.ComponentDescriptionDTO) -> bool: ...

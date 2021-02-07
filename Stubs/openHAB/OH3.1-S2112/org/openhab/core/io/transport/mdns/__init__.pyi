@@ -1,0 +1,63 @@
+import java.lang
+import java.time
+import java.util
+import javax.jmdns
+import typing
+
+
+class MDNSClient(java.lang.Object):
+    """
+    public interface MDNSClient
+    
+        This interface defines how to get an JmDNS instance to access Bonjour/MDNS
+    
+    
+    """
+    def addServiceListener(self, type: java.lang.String, listener: javax.jmdns.ServiceListener) -> None: ...
+    def close(self) -> None: ...
+    def getClientInstances(self) -> java.util.Set[javax.jmdns.JmDNS]: ...
+    @typing.overload
+    def list(self, type: java.lang.String) -> typing.List[javax.jmdns.ServiceInfo]: ...
+    @typing.overload
+    def list(self, type: java.lang.String, timeout: java.time.Duration) -> typing.List[javax.jmdns.ServiceInfo]: ...
+    def registerService(self, description: 'ServiceDescription') -> None: ...
+    def removeServiceListener(self, type: java.lang.String, listener: javax.jmdns.ServiceListener) -> None: ...
+    def unregisterAllServices(self) -> None: ...
+    def unregisterService(self, description: 'ServiceDescription') -> None: ...
+
+class MDNSService(java.lang.Object):
+    """
+    public interface MDNSService
+    
+        This interface defines how to use JmDNS based service discovery to register and unregister services on Bonjour/MDNS
+    
+    
+    """
+    def registerService(self, description: 'ServiceDescription') -> None: ...
+    def unregisterService(self, description: 'ServiceDescription') -> None: ...
+
+class ServiceDescription(java.lang.Object):
+    """
+    Java class 'org.openhab.core.io.transport.mdns.ServiceDescription'
+    
+        Extends:
+            java.lang.Object
+    
+      Constructors:
+        * ServiceDescription(java.lang.String, java.lang.String, int, java.util.Hashtable)
+    
+      Attributes:
+        serviceType (java.lang.String): field
+        serviceName (java.lang.String): field
+        servicePort (int): field
+        serviceProperties (java.util.Hashtable): field
+    
+    """
+    serviceType: java.lang.String = ...
+    serviceName: java.lang.String = ...
+    servicePort: int = ...
+    serviceProperties: java.util.Hashtable = ...
+    def __init__(self, serviceType: java.lang.String, serviceName: java.lang.String, servicePort: int, serviceProperties: java.util.Hashtable[java.lang.String, java.lang.String]): ...
+    def equals(self, obj: typing.Any) -> bool: ...
+    def hashCode(self) -> int: ...
+    def toString(self) -> java.lang.String: ...
