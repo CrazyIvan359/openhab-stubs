@@ -1,0 +1,11 @@
+{
+    "include": [
+        "./automation/lib/python",
+        "./automation/jsr223/python"
+    ],
+    "pythonVersion": "3.0",
+    "reportMissingImports": "information",
+    "reportMissingModuleSource": "none",
+    "reportUnusedImport": "information",
+    "reportUnusedVariable": "warning"
+}

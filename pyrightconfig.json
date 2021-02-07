@@ -1,0 +1,7 @@
+{
+    "pythonVersion": "3.0",
+    "reportMissingImports": "information",
+    "reportMissingModuleSource": "none",
+    "reportUnusedImport": "none",
+    "reportUnusedVariable": "warning"
+}
