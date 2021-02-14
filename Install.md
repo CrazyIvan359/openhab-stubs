@@ -8,6 +8,7 @@ You will need Python 3.6 or higher installed on the computer running your IDE.
 * [Stubs](#Stubs)
 * IDE Setup
   * [VS Code](VSCode/README.md)
+  * [Eclipse](Eclipse/README.md)
 
 ## Stubs
 
